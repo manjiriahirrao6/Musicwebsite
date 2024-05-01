@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#library">Library</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+    <br>
+    <main>
+        <!-- this is a homepage-->
+        <section id="home">
+<div class="logo">
+    <h5 style="padding-top: 24px;"> <img src="headphones.png" alt=""style="height:30px; width: 50px;padding-inline:15px ;">music</h5>
+
+          
+        
+</div>
+    <div class="banner-text">
+    <h1 >My Music</h1>
+<p > Music is Love</p>
+        <div class="banner-btn">
+            <a href="#" ><span></span>Sign in</a>
+            <a href="#"><span></span>Like</a>
+        </div>
+    </div>
+        </section>
+
+    </header>
+
+
+ <!-- this is a song section -->
+ <section id="library">
+    <h2>Songs By Artist</h2>
+    <div class="box-container">
+            <a href="#" class="box" onclick="playSong('Arjit Singh', 'AkhiyaanMilavanga.mp3')" data-song="AR">
+                <img src="AR.jpg" alt="">
+                <h3>Arjit Singh</h3>
+            </a>
+
+            <a href="#" class="box" onclick="playSong('Atif Aslam', 'ATIF.mp3')" data-song="ATIF">
+                <img src="ATIF.jpg" alt="">
+                <h3>Atif Aslam</h3>
+            </a>
+              
+            <a href="#" class="box"  onclick="playSong('Jubin Nautiyal', 'Jubin.mp3')" data-song="Jubin">
+                    <img src="JN.jpg" alt="">
+                    <h3>Jubin Nautiyal</h3>
+            </a>
+            <a href="#" class="box"  onclick="playSong('Yaseer Desai', 'Yaseer.mp3')" data-song="Jubin">
+                    <img src="YD.jpg" alt="">
+                    <h3>Yaseer Desai</h3>
+            </a>
+        
+            <a href="#" class="box" onclick="playSong('Shreya Ghoshal', 'Shreya.mp3')" data-song="Shreya">
+                    <img src="SG.jpg" alt="">
+                    <h3>Shreya Ghoshal</h3>
+            </a>
+            <a href="#" class="box" onclick="playSong('Neha Kakkar','Neha.mp3')"data-song="Neha">
+                    <img src="NK.jpg" alt="">
+                    <h3>Neha Kakkar</h3>
+            </a>
+            <a href="#" class="box"onclick="playSong('Momeena Mustehasen', 'Momeena.mp3')" data-song="Momeena">
+                    <img src="MM.jpg" alt="">
+                    <h3>Momeena </h3>
+            </a>
+            <a href="#" class="box" onclick="playSong('Asees Kaur', 'Asees.mp3')" data-song="Asees">
+                    <img src="AS.jpg" alt="">
+                    <h3>Asees Kaur</h3>
+            </a>
+    </div>
+
+</section>
+        <!-- this is a contact section -->
+        <section id="contact">
+            <div class="container">
+                <h1>My Music</h1>
+<h4>
+
+<ul>
+<li>Neha Kakkar</li>
+  <li>Arijit Singh</li>
+  <li>Badshah</li>
+  <li>Atif Aslam</li>
+  <li>Justin Bieber</li>
+  <li>Himesh Reshammiya</li>
+  <br/>
+</ul>
+
+<ul>
+  <li>Lata Mangeshkar</li>
+  <li>Diljit Dosanjh</li>
+  <li>Ed Sheeran</li>
+  <li>Shreya Ghoshal</li>
+  <li>Sanam Puri</li>
+  <li>Armaan Malik</li>
+</ul>
+</h4>
+
+</div>
+
+<div class="users">
+    JioSaavn ProJioSaavn for iOSJioSaavn for AndroidNew Releases
+</div>
+
+      
+        </section>
+    </main>
+    <footer>
+       
+        <h3>Ad-Free Music. Unlimited Downloads Try JioSaavn Pro!</h3>
+    </footer>
+
+    <script>
+        function playSong(artist, songName) {
+            // Define a mapping between artists and songs
+            const artistSongs = {
+                'Arjit Singh': 'AkhiyaanMilavanga .mp3',
+                'Atif Aslam': 'Tu Jaane Na.mp3',
+                'Jubin Nautiyal':'Raatan Lambiyan.mp3',
+                'Yaseer Desai':'Dhoonde Akhiyaan.mp3',
+                'Shreya Ghoshal': 'Saathiyaa.mp3',
+                'Neha Kakkar':'Buhe Vich.mp3',
+                'Momeena Mustehasen':'Baari.mp3',
+                'Asees Kaur':'Ve Kamleya.mp3',
+                // Add more mappings for other artists
+            };
+
+            // Get the song file name based on the artist
+            const file = artistSongs[artist];
+
+            // Open a pop-up window to play the song
+            window.open("./" + file, "_blank", "width=300,height=150");
+        }
+    </script>
+</body>
+</html>
